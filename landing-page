@@ -1,0 +1,152 @@
+<!-- Cozy Flowers Landing Page - Webflow Ready -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Flowers | Flores con estilo en Punta Alta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #4a3b2a;
+      background-color: #fffaf7;
+    }
+    .section-hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 10rem 2rem;
+    }
+    .hero-title {
+      font-size: 3rem;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-top: 1.2rem;
+      font-weight: 300;
+    }
+    .section-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 5rem 2rem;
+      background-color: #fffdfb;
+    }
+    .benefit-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+    .benefit-title {
+      color: #7a5c45;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+    .benefit-text {
+      font-size: 1rem;
+    }
+    .section-cta {
+      text-align: center;
+      background-color: #f7ebe3;
+      padding: 5rem 2rem;
+    }
+    .cta-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #5a3e2b;
+    }
+    .cta-subtitle {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    .button-primary {
+      background-color: #a9795c;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .button-primary:hover {
+      background-color: #8b5e3c;
+    }
+    .form-wrapper {
+      max-width: 420px;
+      margin: 3rem auto 0;
+    }
+    .input-field, .textarea-field {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f2e6de;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="section-hero wf-section">
+    <h1 class="hero-title">Flores con estilo, para vos o para quienes amás 💐</h1>
+    <p class="hero-subtitle">Diseños únicos, entrega en el día y atención personalizada en Punta Alta.</p>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section-benefits wf-section">
+    <div class="benefit-card">
+      <h3 class="benefit-title">🌷 Diseño moderno</h3>
+      <p class="benefit-text">Ramos y arreglos que combinan estilo, color y emoción en cada detalle.</p>
+    </div>
+    <div class="benefit-card">
+      <h3 class="benefit-title">🚚 Entrega local</h3>
+      <p class="benefit-text">Recibí tus flores el mismo día en Punta Alta o sorprendé a alguien especial.</p>
+    </div>
+    <div class="benefit-card">
+      <h3 class="benefit-title">💌 Detalles personalizados</h3>
+      <p class="benefit-text">Agregá tu dedicatoria, elegí paleta de colores y hacé tu ramo único.</p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-cta wf-section">
+    <h2 class="cta-title">Hacelo especial con Cozy Flowers</h2>
+    <p class="cta-subtitle">Completá el formulario y te ayudamos a crear el ramo perfecto para vos.</p>
+    <a href="#formulario" class="button-primary">Quiero mi ramo</a>
+
+    <div class="form-wrapper" id="formulario">
+      <form name="contact-form" method="POST" data-netlify="true">
+        <input type="text" name="nombre" placeholder="Nombre" class="input-field" required />
+        <input type="email" name="email" placeholder="Correo electrónico" class="input-field" required />
+        <textarea name="mensaje" placeholder="Mensaje o tipo de ramo" rows="4" class="textarea-field"></textarea>
+        <button type="submit" class="button-primary">Enviar pedido</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer wf-section">
+    <p>© 2025 Cozy Flowers · Punta Alta, Buenos Aires · Seguinos en Instagram <strong>@cozyflowers2025</strong></p>
+  </footer>
+</body>
+</html>
+
