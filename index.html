@@ -1,152 +1,375 @@
-<!-- Cozy Flowers Landing Page - Webflow Ready -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cozy Flowers | Flores con estilo en Punta Alta</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: #4a3b2a;
-      background-color: #fffaf7;
-    }
-    .section-hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 10rem 2rem;
-    }
-    .hero-title {
-      font-size: 3rem;
-      margin: 0 auto;
-      max-width: 700px;
-    }
-    .hero-subtitle {
-      font-size: 1.3rem;
-      margin-top: 1.2rem;
-      font-weight: 300;
-    }
-    .section-benefits {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 5rem 2rem;
-      background-color: #fffdfb;
-    }
-    .benefit-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      text-align: center;
-      max-width: 300px;
-      transition: transform 0.3s ease;
-    }
-    .benefit-card:hover {
-      transform: translateY(-5px);
-    }
-    .benefit-title {
-      color: #7a5c45;
-      font-size: 1.3rem;
-      margin-bottom: 0.8rem;
-    }
-    .benefit-text {
-      font-size: 1rem;
-    }
-    .section-cta {
-      text-align: center;
-      background-color: #f7ebe3;
-      padding: 5rem 2rem;
-    }
-    .cta-title {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #5a3e2b;
-    }
-    .cta-subtitle {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-    .button-primary {
-      background-color: #a9795c;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      border-radius: 2rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .button-primary:hover {
-      background-color: #8b5e3c;
-    }
-    .form-wrapper {
-      max-width: 420px;
-      margin: 3rem auto 0;
-    }
-    .input-field, .textarea-field {
-      width: 100%;
-      padding: 0.9rem 1rem;
-      border-radius: 0.5rem;
-      border: 1px solid #ccc;
-      margin-bottom: 1rem;
-      font-family: 'Poppins', sans-serif;
-    }
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f2e6de;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cozy Flowers - Arreglos florales únicos y personalizados para cada ocasión especial. Ramos, centros de mesa y decoración para eventos.">
+    <meta name="keywords" content="flores, arreglos florales, ramos, bodas, eventos, floristería">
+    <title>Cozy Flowers | Arreglos Florales con Amor</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="section-hero wf-section">
-    <h1 class="hero-title">Flores con estilo, para vos o para quienes amás 💐</h1>
-    <p class="hero-subtitle">Diseños únicos, entrega en el día y atención personalizada en Punta Alta.</p>
-  </section>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="images/logo.svg" alt="Cozy Flowers" class="nav__logo-img">
+                <h4 class="nav__logo-text">Cozy Flowers</h4>
+            </a>
 
-  <!-- Benefits Section -->
-  <section class="section-benefits wf-section">
-    <div class="benefit-card">
-      <h3 class="benefit-title">🌷 Diseño moderno</h3>
-      <p class="benefit-text">Ramos y arreglos que combinan estilo, color y emoción en cada detalle.</p>
-    </div>
-    <div class="benefit-card">
-      <h3 class="benefit-title">🚚 Entrega local</h3>
-      <p class="benefit-text">Recibí tus flores el mismo día en Punta Alta o sorprendé a alguien especial.</p>
-    </div>
-    <div class="benefit-card">
-      <h3 class="benefit-title">💌 Detalles personalizados</h3>
-      <p class="benefit-text">Agregá tu dedicatoria, elegí paleta de colores y hacé tu ramo único.</p>
-    </div>
-  </section>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Nosotros</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#gallery" class="nav__link">Galería</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Servicios</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#info-pedidos" class="nav__link">Info Pedidos</a>
+                    </li>
+                                        <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
 
-  <!-- CTA Section -->
-  <section class="section-cta wf-section">
-    <h2 class="cta-title">Hacelo especial con Cozy Flowers</h2>
-    <p class="cta-subtitle">Completá el formulario y te ayudamos a crear el ramo perfecto para vos.</p>
-    <a href="#formulario" class="button-primary">Quiero mi ramo</a>
+                <button class="nav__close" id="nav-close">
+                    <span>&times;</span>
+                </button>
+            </div>
 
-    <div class="form-wrapper" id="formulario">
-      <form name="contact-form" method="POST" data-netlify="true">
-        <input type="text" name="nombre" placeholder="Nombre" class="input-field" required />
-        <input type="email" name="email" placeholder="Correo electrónico" class="input-field" required />
-        <textarea name="mensaje" placeholder="Mensaje o tipo de ramo" rows="4" class="textarea-field"></textarea>
-        <button type="submit" class="button-primary">Enviar pedido</button>
-      </form>
+            <button class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <span class="hero__subtitle">Bienvenidos a</span>
+                <h1 class="hero__title">Cozy Flowers</h1>
+                <p class="hero__description">
+                    Creamos arreglos florales únicos con amor y dedicación
+                    para hacer de tus momentos especiales algo inolvidable
+                </p>
+                <a href="https://wa.me/5492932499049?text=Hola!%20Me%20gustaría%20consultar%20por%20un%20arreglo%20floral"
+                   class="btn btn--primary" target="_blank">
+                    <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Consultanos por WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- Tagline Section -->
+        <section class="tagline">
+            <div class="container">
+                <p class="tagline__text">
+                    Creamos arreglos florales únicos para los momentos<br>
+                    <em>más especiales</em> de tu vida
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="about__content">
+                    <div class="about__image reveal-left">
+                        <img src="images/nuestra-historia.jpg"
+                             alt="Florista trabajando con amor">
+                    </div>
+                    <div class="about__text reveal-right">
+                        <h2 class="section__title">Mi Historia</h2>
+                        <p class="about__description">
+                            Soy Cami, mamá, emprendedora y apasionada de las flores. <em>El mundo de las flores no fue una decisión — fue casi un encuentro.</em> Lo que hoy es <strong>Cozy Flowers</strong> nació de ese momento inesperado conmigo misma: la búsqueda de un espacio propio donde nutrir un sueño sin dejar de ser quien soy en casa.
+                        </p>
+                        <p class="about__description">
+                            La idea surgió de la necesidad de crear algo auténtico, cálido y lleno de vida — tan <em>cozy</em> como el alma de este proyecto. Desde entonces, me dedico a diseñar arreglos florales únicos para momentos especiales: cumpleaños, fechas importantes, regalos o simplemente para iluminar un rincón del hogar.
+                        </p>
+                        <p class="about__description">
+                            Cada arreglo que creo es mucho más que flores. Es la confirmación de que los sueños pueden florecer a cualquier hora, con cualquier agenda. Cada ramo lleva detrás una historia de dedicación, detalle y mucho cariño.
+                        </p>
+                        <p class="about__description">
+                            Si estás buscando un regalo que diga lo que las palabras no alcanzan, o simplemente querés llenarte de color y aroma, estás en el lugar indicado. 🌸
+                        </p>
+                        <p class="about__description">
+                            <em>¡Hablemos y creemos algo hermoso juntos!</em>
+                        </p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery section" id="gallery">
+            <div class="container">
+                <span class="section__subtitle">Nuestro trabajo</span>
+                <h2 class="section__title">Galería</h2>
+                <p class="section__description">
+                    Cada arreglo es único, creado especialmente para vos
+                </p>
+
+                <div class="gallery__grid">
+                    <div class="gallery__item reveal-up" data-category="centros">
+                        <img src="images/galeria-1.jpg"
+                             alt="Centro de mesa colorido">
+                        <div class="gallery__overlay">
+                            <span class="gallery__category">Centros de Mesa</span>
+                            <h4 class="gallery__title">Centro Colorido</h4>
+                        </div>
+                    </div>
+                    <div class="gallery__item reveal-up" data-category="ramos">
+                        <img src="images/galeria-2.jpg"
+                             alt="Ramo gerberas y crisantemos">
+                        <div class="gallery__overlay">
+                            <span class="gallery__category">Ramos</span>
+                            <h4 class="gallery__title">Alegría de Colores</h4>
+                        </div>
+                    </div>
+                    <div class="gallery__item reveal-up" data-category="ramos">
+                        <img src="images/galeria-3.jpg"
+                             alt="Ramo amarillo y blanco">
+                        <div class="gallery__overlay">
+                            <span class="gallery__category">Ramos</span>
+                            <h4 class="gallery__title">Ramo Amarillo</h4>
+                        </div>
+                    </div>
+                    <div class="gallery__item reveal-up" data-category="ramos">
+                        <img src="images/galeria-4.jpg"
+                             alt="Ramo girasoles y crisantemos">
+                        <div class="gallery__overlay">
+                            <span class="gallery__category">Ramos</span>
+                            <h4 class="gallery__title">Ramo Alegría</h4>
+                        </div>
+                    </div>
+                    <div class="gallery__item reveal-up" data-category="ramos">
+                        <img src="images/galeria-5.jpg"
+                             alt="Ramo de margaritas blancas">
+                        <div class="gallery__overlay">
+                            <span class="gallery__category">Ramos</span>
+                            <h4 class="gallery__title">Margaritas Blancas</h4>
+                        </div>
+                    </div>
+                    <div class="gallery__item reveal-up" data-category="centros">
+                        <img src="images/galeria-6.jpg"
+                             alt="Centro de mesa colorido con eucaliptos">
+                        <div class="gallery__overlay">
+                            <span class="gallery__category">Centros de Mesa</span>
+                            <h4 class="gallery__title">Centro Colorido</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <span class="section__subtitle">Lo que ofrecemos</span>
+                <h2 class="section__title">Nuestros Servicios</h2>
+                <p class="section__description">
+                    Creamos magia floral para cada ocasión especial
+                </p>
+
+                <div class="services__grid">
+                    <article class="service-card reveal-up">
+                        <div class="service-card__image">
+                            <img src="images/centros-de-mesa.jpg"
+                                 alt="Centros de mesa florales">
+                        </div>
+                        <div class="service-card__body">
+                            <h3 class="service-card__title">Centros de Mesa</h3>
+                            <p class="service-card__description">
+                                Elegantes arreglos para decorar reuniones, cumpleaños y celebraciones
+                            </p>
+                            <div class="service-card__price">
+                                <span class="price__from">Desde</span>
+                                <span class="price__amount">$8.000</span>
+                            </div>
+                            <a href="https://wa.me/5492932499049?text=Hola!%20Quiero%20consultar%20por%20centros%20de%20mesa"
+                               class="btn btn--outline" target="_blank">Consultar</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card featured reveal-up">
+                        <div class="service-card__badge">Popular</div>
+                        <div class="service-card__image">
+                            <img src="images/ramo-personalizado.jpg"
+                                 alt="Ramos personalizados">
+                        </div>
+                        <div class="service-card__body">
+                            <h3 class="service-card__title">Ramos Personalizados</h3>
+                            <p class="service-card__description">
+                                Ramos únicos diseñados según tus gustos y la ocasión especial
+                            </p>
+                            <div class="service-card__price">
+                                <span class="price__from">Desde</span>
+                                <span class="price__amount">$5.000</span>
+                            </div>
+                            <a href="https://wa.me/5492932499049?text=Hola!%20Quiero%20consultar%20por%20un%20ramo%20personalizado"
+                               class="btn btn--primary" target="_blank">Consultar</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up">
+                        <div class="service-card__image">
+                            <img src="images/caja-floral.jpg"
+                                 alt="Cajas florales">
+                        </div>
+                        <div class="service-card__body">
+                            <h3 class="service-card__title">Cajas Florales</h3>
+                            <p class="service-card__description">
+                                Hermosas cajas con flores y sorpresas para regalar en fechas especiales
+                            </p>
+                            <div class="service-card__price">
+                                <span class="price__from">Desde</span>
+                                <span class="price__amount">$7.000</span>
+                            </div>
+                            <a href="https://wa.me/5492932499049?text=Hola!%20Quiero%20consultar%20por%20cajas%20florales"
+                               class="btn btn--outline" target="_blank">Consultar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Pedidos Section -->
+        <section class="info-pedidos section" id="info-pedidos">
+            <div class="container">
+                <span class="section__subtitle">Antes de hacer tu pedido</span>
+                <h2 class="section__title">Información Importante</h2>
+                <p class="section__description">
+                    Para brindarte el mejor servicio, tené en cuenta estos detalles
+                </p>
+
+                <div class="info-pedidos__grid">
+                    <article class="info-card reveal-up">
+                        <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                        <h3 class="info-card__title">Anticipación de 48hs</h3>
+                        <p class="info-card__description">
+                            Los pedidos deben realizarse con al menos <strong>48 horas de anticipación</strong> para garantizar la disponibilidad y frescura de las flores.
+                        </p>
+                    </article>
+
+                    <article class="info-card reveal-up">
+                        <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+                        <h3 class="info-card__title">Pago por Transferencia</h3>
+                        <p class="info-card__description">
+                            Aceptamos pagos mediante <strong>transferencia bancaria</strong>. Te enviaremos los datos una vez confirmado tu pedido.
+                        </p>
+                    </article>
+
+                    <article class="info-card reveal-up">
+                        <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 1C9 1 6.5 3.5 6.5 6.5c0 4 5.5 7.5 5.5 7.5s5.5-3.5 5.5-7.5C17.5 3.5 15 1 12 1z"/><circle cx="12" cy="6" r="3"/><circle cx="12" cy="6" r="1.2"/><path d="M12 4.8V4M12 8v-.8M10.2 6H9.5M14.5 6h-.7M10.8 4.8l-.5-.5M13.7 7.7l-.5-.5M10.8 7.2l-.5.5M13.7 4.3l-.5.5"/><rect x="4" y="15" width="16" height="7" rx="1"/><path d="M4 17.5c1.2 0 1.5.8 2.5.8s1.5-.8 2.5-.8 1.5.8 2.5.8 1.5-.8 2.5-.8 1.5.8 2.5.8 1.3-.8 2.5-.8"/><rect x="7" y="19" width="3" height="3"/><rect x="14" y="19" width="3" height="3"/></svg></div>
+                        <h3 class="info-card__title">Sujeto a Disponibilidad</h3>
+                        <p class="info-card__description">
+                            Los pedidos quedan sujetos a la <strong>disponibilidad de las flores</strong>. Te avisaremos si es necesario realizar algún cambio.
+                        </p>
+                    </article>
+
+                    <article class="info-card reveal-up">
+                        <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
+                        <h3 class="info-card__title">Pedidos Confirmados</h3>
+                        <p class="info-card__description">
+                            Una vez confirmado el pedido, <strong>no se permiten cambios ni cancelaciones</strong>. Asegurate de revisar todos los detalles antes de confirmar.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact__centered">
+                    <span class="section__subtitle">¿Te gustó lo que viste?</span>
+                    <h2 class="section__title">Hagamos tu arreglo soñado</h2>
+                    <p class="contact__description">
+                        Escribinos por WhatsApp y te asesoramos sin compromiso.<br>
+                        ¡Estamos para ayudarte a crear algo único!
+                    </p>
+                    <a href="https://wa.me/5492932499049?text=Hola!%20Me%20gustaría%20consultar%20por%20un%20arreglo%20floral"
+                       class="btn btn--whatsapp btn--large" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Chateá con nosotros
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <a href="#" class="footer__logo">
+                    <span class="footer__logo-badge">
+                        <img src="images/logo-footer.svg" alt="Cozy Flowers" class="footer__logo-img">
+                    </span>
+                    <h4 class="footer__logo-text">Cozy Flowers</h4>
+                </a>
+
+                <a href="https://wa.me/5492932499049" target="_blank" class="footer__link">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="footer__icon">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    +54 9 2932 499049
+                </a>
+
+                <a href="https://instagram.com/cozyflowers2025" target="_blank" class="footer__link">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="footer__icon">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    @cozyflowers2025
+                </a>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; <span id="current-year"></span> Cozy Flowers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5492932499049?text=Hola!%20Me%20gustaría%20consultar%20por%20un%20arreglo%20floral"
+       class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-float__tooltip">¡Chateá con nosotros!</span>
+    </a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" aria-label="Cerrar">&times;</button>
+        <button class="lightbox__prev" aria-label="Anterior">‹</button>
+        <button class="lightbox__next" aria-label="Siguiente">›</button>
+        <div class="lightbox__content">
+            <img src="" alt="" class="lightbox__image">
+            <div class="lightbox__caption"></div>
+        </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer wf-section">
-    <p>© 2025 Cozy Flowers · Punta Alta, Buenos Aires · Seguinos en Instagram <strong>@cozyflowers2025</strong></p>
-  </footer>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
-
