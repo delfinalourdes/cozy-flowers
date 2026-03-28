@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open /Users/delfinamansilla/Documents/cozy-flowers/index.html)",
+      "Bash(curl -s http://localhost:3456/index.html)",
+      "Bash(curl -s http://localhost:3457/index.html)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(mkdir -p /tmp/cozy-flowers/images)",
+      "Bash(cp /Users/delfinamansilla/Documents/cozy-flowers/index.html /tmp/cozy-flowers/)",
+      "Bash(cp /Users/delfinamansilla/Documents/cozy-flowers/css/styles.css /tmp/cozy-flowers/css/)",
+      "Bash(cp /Users/delfinamansilla/Documents/cozy-flowers/images/logo-footer.svg /tmp/cozy-flowers/images/)",
+      "Bash(cp /Users/delfinamansilla/Documents/cozy-flowers/images/logo.svg /tmp/cozy-flowers/images/)",
+      "Bash(mkdir -p /tmp/cozy-flowers/css /tmp/cozy-flowers/js)"
+    ]
+  }
+}

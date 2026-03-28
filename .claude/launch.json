@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cozy-flowers",
+      "runtimeExecutable": "ruby",
+      "runtimeArgs": ["-run", "-e", "httpd", "/tmp/cozy-flowers", "-p", "3456"],
+      "port": 3456
+    }
+  ]
+}
